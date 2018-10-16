@@ -132,6 +132,18 @@ public class CheckoutSolution {
     		totalPrice+= (remainings % 5) * 10;
     		
     	}
+    	else if(item.equals("I")) {
+    		
+    		totalPrice = quantity * 35;
+    	}
+    	else if(item.equals("J")) {
+    		
+    		totalPrice = quantity * 60;
+    	}
+    	
+    	else if(item.equals("K")) {
+    		totalPrice = (quantity / 2) * 150 + (quantity % 2) * 80;
+    	}
     	
     	return totalPrice;
     	
