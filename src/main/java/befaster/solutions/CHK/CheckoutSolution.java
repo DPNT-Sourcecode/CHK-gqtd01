@@ -208,6 +208,14 @@ public class CheckoutSolution {
     		totalPrice = quantity * 20;
     	}
     	
+    	else if(item.equals("U")) {
+    		
+    		if((quantity / 4) > 0) {
+    			quantity = quantity - (quantity / 4);
+    		}
+    		
+    		totalPrice = quantity * 40;
+    	}
     	
     	return totalPrice;
     	
