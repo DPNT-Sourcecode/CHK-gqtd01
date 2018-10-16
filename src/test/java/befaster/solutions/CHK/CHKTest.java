@@ -18,7 +18,7 @@ public class CHKTest {
 	@Test
 	public void computeCase1(){
 		
-		assertEquals((Integer)660, checkSol.checkout("ABCD"));
+		assertEquals((Integer)115, checkSol.checkout("ABCD"));
 	}
 	
 	/*@Test

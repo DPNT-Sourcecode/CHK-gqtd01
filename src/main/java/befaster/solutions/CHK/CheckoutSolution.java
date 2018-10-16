@@ -1,7 +1,11 @@
 package befaster.solutions.CHK;
 
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.HashMap;
+
+import org.junit.Test;
 
 
 
@@ -18,23 +22,23 @@ public class CheckoutSolution {
     		return 0;
     	}
     	
-    	String[] products = skus.split(",");
+    	/*String[] products = skus.split(",");
     	
     	if(products.length == 0) {
     		return -1;
-    	}
+    	}*/
     	
-    	for(String product : products) {
+    	//for(String product : products) {
     		
     			try {
-					processProductString(hmap, product);
+					processProductString(hmap, skus);
 				} catch (IncorrectFormatException e) {
 					
 					return -1;
 					
 				}
     		
-    	}
+    	//}
     	
     	for(String key : hmap.keySet()) {
     		totalPrice+= specialOffer(key, hmap.get(key));
@@ -114,7 +118,12 @@ public class CheckoutSolution {
     }
     
     
-    
+    @Test
+	public void computeCase1(){
+    	
+    	CheckoutSolution checkSol = new CheckoutSolution();
+		assertEquals((Integer)115, checkSol.checkout("ABCD"));
+	}
    
   
 }
