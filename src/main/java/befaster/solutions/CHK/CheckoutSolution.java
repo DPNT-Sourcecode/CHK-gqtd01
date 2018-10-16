@@ -1,10 +1,8 @@
 package befaster.solutions.CHK;
 
-import static org.junit.Assert.assertEquals;
 
 import java.util.HashMap;
 
-import org.junit.Test;
 
 
 public class CheckoutSolution {
@@ -13,7 +11,15 @@ public class CheckoutSolution {
     	int totalPrice = 0;
     	HashMap<String, Integer> hmap = new HashMap<String, Integer>();
     	
+    	if(skus == null || skus.length() == 0) {
+    		return -1;
+    	}
+    	
     	String[] products = skus.split(",");
+    	
+    	if(products.length == 0) {
+    		return -1;
+    	}
     	
     	for(String product : products) {
     		
