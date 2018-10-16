@@ -145,7 +145,7 @@ public class CheckoutSolution {
     	
     	for(int i=0; i< proStringLength; i++) {
     		item = proString.charAt(i);
-    		if(item  != 'A' && item  != 'B' && item  != 'C' && item  != 'D' && item != 'E' && item != 'F') {
+    		if(!"ABCDEFGHIJKLMNOPQRSTUVWXYZ".contains(item+"")) {
         		throw new IncorrectFormatException("Format exception");
         	}
     		if(map.get(item+"") == null) {
