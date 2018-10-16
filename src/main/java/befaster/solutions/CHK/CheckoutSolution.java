@@ -65,7 +65,7 @@ public class CheckoutSolution {
     public void testCheckout() {
     	
     	CheckoutSolution chSol = new CheckoutSolution();
-    	assertEquals((Integer)660, chSol.checkout("6A, 10B, 5C, 5D"));
+    	assertEquals((Integer)660, chSol.checkout("6A,10B,5C,5D"));
     	
     }
     
