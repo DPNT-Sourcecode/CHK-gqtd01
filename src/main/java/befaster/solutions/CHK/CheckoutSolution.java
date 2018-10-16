@@ -1,11 +1,9 @@
 package befaster.solutions.CHK;
 
 
-import static org.junit.Assert.assertEquals;
 
 import java.util.HashMap;
 
-import org.junit.Test;
 
 
 
@@ -22,13 +20,7 @@ public class CheckoutSolution {
     		return 0;
     	}
     	
-    	/*String[] products = skus.split(",");
     	
-    	if(products.length == 0) {
-    		return -1;
-    	}*/
-    	
-    	//for(String product : products) {
     		
     			try {
 					processProductString(hmap, skus);
@@ -38,14 +30,14 @@ public class CheckoutSolution {
 					
 				}
     		
-    	//}
+   
     	
     	for(String key : hmap.keySet()) {
     		totalPrice+= specialOffer(key, hmap.get(key));
     	}
     	
     	return totalPrice;
-    	//throw new SolutionNotImplementedException();
+    	
     }
     
     private int specialOffer(String item, int quantity) {
@@ -73,30 +65,7 @@ public class CheckoutSolution {
     }
     
     
-    /*private void processProductString(HashMap<String, Integer> map, String proString) throws IncorrectFormatException {
-    	
-    	int quantity;
-    	String quantityString = proString.substring(0, proString.length() - 1);
-    	char item = proString.charAt(proString.length() - 1);
-    	if(item  != 'A' && item  != 'B' && item  != 'C' && item  != 'D') {
-    		throw new IncorrectFormatException("Format exception");
-    	}
-    	
-    	if(proString.length() == 1) {
-    		quantity = 1;
-    	}
-    	else {
-    	try {
-    		quantity = Integer.parseInt(quantityString);
-		} catch (NumberFormatException e) {
-			throw new IncorrectFormatException("Format exception");
-		}
-    	}
-    	
-    	map.put(proString.charAt(proString.length() - 1) + "", quantity);
-    	    	
-    }*/
-    
+  
     private void processProductString(HashMap<String, Integer> map, String proString) throws IncorrectFormatException {
     	
     	int proStringLength = proString.length();
