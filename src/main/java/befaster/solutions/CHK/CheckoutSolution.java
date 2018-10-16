@@ -2,9 +2,13 @@ package befaster.solutions.CHK;
 
 
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
+
+import org.junit.Test;
 
 
 
@@ -57,7 +61,7 @@ public class CheckoutSolution {
     	
     	if(item.equals("A")) {
     		
-    		//totalPrice = (quantity / 3) * 130 + (quantity % 3) * 50;
+    		
     		if((quantity / 5) > 0) {
     			totalPrice+= (quantity / 5) * 200;
     			
@@ -147,12 +151,12 @@ public class CheckoutSolution {
     }
     
     
-   /* @Test
+    @Test
 	public void computeCase1(){
     	
     	CheckoutSolution checkSol = new CheckoutSolution();
 		assertEquals((Integer)115, checkSol.checkout("ABCD"));
-	}*/
+	}
    
   
 }
