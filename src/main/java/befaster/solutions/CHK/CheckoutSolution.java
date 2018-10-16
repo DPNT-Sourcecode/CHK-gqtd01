@@ -18,7 +18,7 @@ public class CheckoutSolution {
     		return 0;
     	}
     	
-    	String[] products = skus.split("");
+    	String[] products = skus.split(",");
     	
     	if(products.length == 0) {
     		return -1;
@@ -69,7 +69,7 @@ public class CheckoutSolution {
     }
     
     
-    private void processProductString(HashMap<String, Integer> map, String proString) throws IncorrectFormatException {
+    /*private void processProductString(HashMap<String, Integer> map, String proString) throws IncorrectFormatException {
     	
     	int quantity;
     	String quantityString = proString.substring(0, proString.length() - 1);
@@ -91,7 +91,29 @@ public class CheckoutSolution {
     	
     	map.put(proString.charAt(proString.length() - 1) + "", quantity);
     	    	
+    }*/
+    
+    private void processProductString(HashMap<String, Integer> map, String proString) throws IncorrectFormatException {
+    	
+    	int proStringLength = proString.length();
+    	char item;
+    	
+    	for(int i=0; i< proStringLength; i++) {
+    		item = proString.charAt(i);
+    		if(item  != 'A' && item  != 'B' && item  != 'C' && item  != 'D') {
+        		throw new IncorrectFormatException("Format exception");
+        	}
+    		if(map.get(item+"") == null) {
+    			map.put(item + "", 0);
+    		} else {
+    			map.put(item + "", map.get(item+"") + 1);
+    		}
+    	}
+    	
+    	
     }
+    
+    
     
    
   
