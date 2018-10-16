@@ -217,7 +217,7 @@ public class CheckoutSolution {
     		totalPrice = quantity * 40;
     	}
     	
-    	if(item.equals("V")) {
+    	else if(item.equals("V")) {
     		
     		
     		if((quantity / 3) > 0) {
@@ -234,6 +234,23 @@ public class CheckoutSolution {
     		totalPrice+= (remainings % 2) * 50;
     		
     	}
+    	else if(item.equals("W")) {
+    		
+    		totalPrice = quantity * 20;
+    	}
+    	else if(item.equals("X")) {
+    		
+    		totalPrice = quantity * 90;
+    	}
+    	else if(item.equals("Y")) {
+    		
+    		totalPrice = quantity * 10;
+    	}
+    	else if(item.equals("Z")) {
+	
+    		totalPrice = quantity * 50;
+    	}
+    	
     	return totalPrice;
     	
     }
