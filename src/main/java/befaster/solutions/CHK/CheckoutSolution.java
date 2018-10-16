@@ -19,7 +19,7 @@ public class CheckoutSolution {
     		
     			try {
 					processProductString(hmap, product);
-				} catch (IncorrectFormatException1 e) {
+				} catch (IncorrectFormatException e) {
 					
 					return -1;
 					
@@ -60,18 +60,18 @@ public class CheckoutSolution {
     }
     
     
-    private void processProductString(HashMap<String, Integer> map, String proString) throws IncorrectFormatException1 {
+    private void processProductString(HashMap<String, Integer> map, String proString) throws IncorrectFormatException {
     	
     	int quantity;
     	String quantityString = proString.substring(0, proString.length() - 1);
     	char item = proString.charAt(proString.length() - 1);
     	if(item  != 'A' && item  != 'B' && item  != 'C' && item  != 'D') {
-    		throw new IncorrectFormatException1("Format exception");
+    		throw new IncorrectFormatException("Format exception");
     	}
     	try {
     		quantity = Integer.parseInt(quantityString);
 		} catch (NumberFormatException e) {
-			throw new IncorrectFormatException1("Format exception");
+			throw new IncorrectFormatException("Format exception");
 		}
     	
     	map.put(proString.charAt(proString.length() - 1) + "", quantity);
