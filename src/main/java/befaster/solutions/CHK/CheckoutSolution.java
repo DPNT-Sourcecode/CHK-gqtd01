@@ -82,6 +82,7 @@ public class CheckoutSolution {
     	
     	CheckoutSolution chSol = new CheckoutSolution();
     	assertEquals((Integer)660, chSol.checkout("6A,10B,5C,5D"));
+    	//assertEquals(new Integer(-1), chSol.checkout("1000Z"));
     	
     }
     
