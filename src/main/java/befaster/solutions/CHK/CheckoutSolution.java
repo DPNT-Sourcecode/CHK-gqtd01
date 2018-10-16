@@ -72,6 +72,19 @@ public class CheckoutSolution {
     	else if(item.equals("D")) {
     		totalPrice = quantity * 15;
     	}
+    	else if(item.equals("E")) {
+    		
+    		if((quantity / 2) > 0) {
+    			int amount = quantity / 2;
+    			
+    			if(map.get("B") >= amount) {
+    				map.put("B",map.get("B") - amount);
+    			} else {
+    				map.put("B",0);
+    			}
+    		}
+    		totalPrice = quantity * 40;
+    	}
     	
     	return totalPrice;
     	
