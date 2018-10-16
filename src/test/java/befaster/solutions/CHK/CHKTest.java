@@ -30,7 +30,7 @@ public class CHKTest {
 	@Test
 	public void computeCase3(){
 		
-		assertEquals((Integer)15000, checkSol.checkout("1000D"));
+		assertEquals((Integer)15, checkSol.checkout("1D"));
 	}
 	
 	@Test

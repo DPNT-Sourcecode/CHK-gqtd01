@@ -74,11 +74,17 @@ public class CheckoutSolution {
     	if(item  != 'A' && item  != 'B' && item  != 'C' && item  != 'D') {
     		throw new IncorrectFormatException("Format exception");
     	}
+    	
+    	if(quantityString.length() == 1) {
+    		quantity = 1;
+    	}
+    	else {
     	try {
     		quantity = Integer.parseInt(quantityString);
 		} catch (NumberFormatException e) {
 			throw new IncorrectFormatException("Format exception");
 		}
+    	}
     	
     	map.put(proString.charAt(proString.length() - 1) + "", quantity);
     	    	
