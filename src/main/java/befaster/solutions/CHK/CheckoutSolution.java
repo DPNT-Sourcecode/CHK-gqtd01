@@ -1,6 +1,10 @@
 package befaster.solutions.CHK;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.HashMap;
+
+import org.junit.Test;
 
 
 public class CheckoutSolution {
@@ -15,7 +19,7 @@ public class CheckoutSolution {
     		
     			try {
 					processProductString(hmap, product);
-				} catch (IncorrectFormatException e) {
+				} catch (IncorrectFormatException1 e) {
 					
 					return -1;
 					
@@ -56,23 +60,25 @@ public class CheckoutSolution {
     }
     
     
-    private void processProductString(HashMap<String, Integer> map, String proString) throws IncorrectFormatException {
+    private void processProductString(HashMap<String, Integer> map, String proString) throws IncorrectFormatException1 {
     	
     	int quantity;
     	String quantityString = proString.substring(0, proString.length() - 1);
     	char item = proString.charAt(proString.length() - 1);
     	if(item  != 'A' && item  != 'B' && item  != 'C' && item  != 'D') {
-    		throw new IncorrectFormatException("Format exception");
+    		throw new IncorrectFormatException1("Format exception");
     	}
     	try {
     		quantity = Integer.parseInt(quantityString);
 		} catch (NumberFormatException e) {
-			throw new IncorrectFormatException("Format exception");
+			throw new IncorrectFormatException1("Format exception");
 		}
     	
     	map.put(proString.charAt(proString.length() - 1) + "", quantity);
     	    	
     }
+    
+   
   
 }
 
