@@ -151,12 +151,12 @@ public class CheckoutSolution {
     }
     
     
-   /* @Test
+    @Test
 	public void computeCase1(){
     	
     	CheckoutSolution checkSol = new CheckoutSolution();
-		assertEquals((Integer)165, checkSol.checkout("EEABCD"));
-	}*/
+		assertEquals((Integer)200, checkSol.checkout("AAAAA"));
+	}
    
   
 }
