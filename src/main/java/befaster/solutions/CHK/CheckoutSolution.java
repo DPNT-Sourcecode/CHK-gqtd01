@@ -53,10 +53,20 @@ public class CheckoutSolution {
     }
     
     
-    private void processProductString(HashMap<String, Integer> map, String proString) {
+    private void processProductString(HashMap<String, Integer> map, String proString) throws IncorrectFormatException {
     	
+    	int quantity;
     	String quantityString = proString.substring(0, proString.length() - 1);
-    	int quantity = Integer.parseInt(quantityString);
+    	char item = proString.charAt(proString.length() - 1);
+    	if(item  != 'A' || item  != 'B' || item  != 'C' || item  != 'D') {
+    		throw new IncorrectFormatException("Format exception");
+    	}
+    	try {
+    		quantity = Integer.parseInt(quantityString);
+		} catch (NumberFormatException e) {
+			throw new IncorrectFormatException("Format exception");
+		}
+    	
     	map.put(proString.charAt(proString.length() - 1) + "", quantity);
     	    	
     }
