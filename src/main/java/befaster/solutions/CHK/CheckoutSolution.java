@@ -94,11 +94,11 @@ public class CheckoutSolution {
     	
     }
     
-    private void processPrirityOneFirst(Set<String> keySet) {
+    private ArrayList<String> processPrirityOneFirst(Set<String> keySet) {
     	
     	ArrayList<String> stringArrays = new ArrayList<String>();
     	stringArrays.add("E");
-    	int i = 1;
+    	
     	for(String key : keySet) {
     		
     		if(!key.equals("E")) {
@@ -108,6 +108,8 @@ public class CheckoutSolution {
     		//totalPrice+= specialOffer(key, hmap.get(key));
     		
     	}
+    	
+    	return stringArrays;
     	
     }
     
