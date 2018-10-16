@@ -40,12 +40,25 @@ public class CheckoutSolution {
     	
     }
     
-    private int specialOffer(String item, int quantity) {
+    private int specialOffer(HashMap<String, Integer> map, String item, int quantity) {
     	int totalPrice = 0;
+    	int remainings = 0;
     	
     	if(item.equals("A")) {
     		
-    		totalPrice = (quantity / 3) * 130 + (quantity % 3) * 50;
+    		//totalPrice = (quantity / 3) * 130 + (quantity % 3) * 50;
+    		if((quantity / 5) > 0) {
+    			totalPrice+= (quantity / 5) * 200;
+    			
+    		}
+    		
+    		remainings = quantity % 5;
+    		
+    		if((remainings / 3) > 0) {
+    			totalPrice+= (quantity / 3) * 130;
+    		}
+    		
+    		totalPrice+= (quantity % 3) * 50;
     		
     	}
     	
