@@ -198,6 +198,17 @@ public class CheckoutSolution {
     		totalPrice = quantity * 50;
     	}
     	
+    	else if(item.equals("S")) {
+    		
+    		totalPrice = quantity * 30;
+    	}
+    	
+    	else if(item.equals("T")) {
+    		
+    		totalPrice = quantity * 20;
+    	}
+    	
+    	
     	return totalPrice;
     	
     }
