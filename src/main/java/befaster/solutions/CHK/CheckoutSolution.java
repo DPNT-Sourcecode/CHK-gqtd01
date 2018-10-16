@@ -111,6 +111,28 @@ public class CheckoutSolution {
     		totalPrice = quantity * 10;
     	}
     	
+    	else if(item.equals("G")) {
+    		
+    		totalPrice = quantity * 20;
+    	}
+    	
+    	else if(item.equals("H")) {
+    		
+    		if((quantity / 10) > 0) {
+    			totalPrice+= (quantity / 10) * 80;
+    			
+    		}
+    		
+    		remainings = quantity % 10;
+    		
+    		if((remainings / 5) > 0) {
+    			totalPrice+= (remainings / 5) * 45;
+    		}
+    		
+    		totalPrice+= (remainings % 5) * 10;
+    		
+    	}
+    	
     	return totalPrice;
     	
     }
