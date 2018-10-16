@@ -262,10 +262,16 @@ public class CheckoutSolution {
     	if(inputString.contains("E")) {
     		stringArrays.add("E");
     	}
+    	if(inputString.contains("N")) {
+    		stringArrays.add("N");
+    	}
+    	if(inputString.contains("R")) {
+    		stringArrays.add("R");
+    	}
     	
     	for(String key : keySet) {
     		
-    		if(!key.equals("E")) {
+    		if(!("ENR").contains(key)) {
     			stringArrays.add(key);
     		}
     		
