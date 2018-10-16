@@ -16,7 +16,11 @@ public class CheckoutSolution {
     		
     	}
     	
+    	for(String key : hmap.keySet()) {
+    		totalPrice+= specialOffer(key, hmap.get(key));
+    	}
     	
+    	return totalPrice;
     	//throw new SolutionNotImplementedException();
     }
     
