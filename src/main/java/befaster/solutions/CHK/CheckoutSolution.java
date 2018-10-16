@@ -102,6 +102,9 @@ public class CheckoutSolution {
     		}
     		totalPrice = quantity * 40;
     	}
+    	else if(item.equals("F")) {
+    		
+    	}
     	
     	return totalPrice;
     	
@@ -137,7 +140,7 @@ public class CheckoutSolution {
     	
     	for(int i=0; i< proStringLength; i++) {
     		item = proString.charAt(i);
-    		if(item  != 'A' && item  != 'B' && item  != 'C' && item  != 'D' && item != 'E') {
+    		if(item  != 'A' && item  != 'B' && item  != 'C' && item  != 'D' && item != 'E' && item != 'F') {
         		throw new IncorrectFormatException("Format exception");
         	}
     		if(map.get(item+"") == null) {
