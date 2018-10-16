@@ -104,6 +104,11 @@ public class CheckoutSolution {
     	}
     	else if(item.equals("F")) {
     		
+    		if((quantity / 3) > 0) {
+    			quantity = quantity - (quantity / 3);
+    		}
+    		
+    		totalPrice = quantity * 10;
     	}
     	
     	return totalPrice;
@@ -158,7 +163,7 @@ public class CheckoutSolution {
 	public void computeCase1(){
     	
     	CheckoutSolution checkSol = new CheckoutSolution();
-		assertEquals((Integer)200, checkSol.checkout("AAAAA"));
+		assertEquals((Integer)220, checkSol.checkout("AAAAAFFF"));
 	}
    
   
