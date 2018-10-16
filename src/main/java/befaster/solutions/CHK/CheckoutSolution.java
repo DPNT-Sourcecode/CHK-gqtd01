@@ -182,6 +182,21 @@ public class CheckoutSolution {
     		totalPrice = (quantity / 3) * 80 + (quantity % 3) * 30;
     	}
     	
+    	else if(item.equals("R")) {
+    		
+    		if((quantity / 3) > 0) {
+    			int amount = quantity / 3;
+    			
+    			if(map.get("Q") != null) {
+					if (map.get("Q") >= amount) {
+						map.put("Q", map.get("Q") - amount);
+					} else {
+						map.put("Q", 0);
+					}
+    			}
+    		}
+    		totalPrice = quantity * 50;
+    	}
     	
     	return totalPrice;
     	
