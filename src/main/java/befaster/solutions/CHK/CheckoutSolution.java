@@ -144,6 +144,44 @@ public class CheckoutSolution {
     	else if(item.equals("K")) {
     		totalPrice = (quantity / 2) * 150 + (quantity % 2) * 80;
     	}
+    	else if(item.equals("L")) {
+    		
+    		totalPrice = quantity * 90;
+    	}
+    	else if(item.equals("M")) {
+    		
+    		totalPrice = quantity * 15;
+    	}
+    	
+    	else if(item.equals("N")) {
+    		
+    		if((quantity / 3) > 0) {
+    			int amount = quantity / 3;
+    			
+    			if(map.get("M") != null) {
+					if (map.get("M") >= amount) {
+						map.put("M", map.get("M") - amount);
+					} else {
+						map.put("M", 0);
+					}
+    			}
+    		}
+    		totalPrice = quantity * 40;
+    	}
+    	
+    	else if(item.equals("O")) {
+    		
+    		totalPrice = quantity * 10;
+    	}
+    	
+    	else if(item.equals("P")) {
+    		totalPrice = (quantity / 5) * 200 + (quantity % 5) * 50;
+    	}
+    	
+    	else if(item.equals("Q")) {
+    		totalPrice = (quantity / 3) * 80 + (quantity % 3) * 30;
+    	}
+    	
     	
     	return totalPrice;
     	
