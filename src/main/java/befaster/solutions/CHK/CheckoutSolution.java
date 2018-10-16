@@ -1,6 +1,10 @@
 package befaster.solutions.CHK;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.HashMap;
+
+import org.junit.Test;
 
 public class CheckoutSolution {
     public Integer checkout(String skus) {
@@ -51,9 +55,18 @@ public class CheckoutSolution {
     
     private void processProductString(HashMap<String, Integer> map, String proString) {
     	
-    	String quantityString = proString.substring(0, proString.length() - 2);
+    	String quantityString = proString.substring(0, proString.length() - 1);
     	int quantity = Integer.parseInt(quantityString);
     	map.put(proString.charAt(proString.length() - 1) + "", quantity);
     	    	
     }
+    
+    @Test
+    public void testCheckout() {
+    	
+    	CheckoutSolution chSol = new CheckoutSolution();
+    	assertEquals((Integer)660, chSol.checkout("6A, 10B, 5C, 5D"));
+    	
+    }
+    
 }
