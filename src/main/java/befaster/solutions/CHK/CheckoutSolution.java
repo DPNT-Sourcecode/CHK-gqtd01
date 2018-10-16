@@ -11,11 +11,14 @@ public class CheckoutSolution {
     	int totalPrice = 0;
     	HashMap<String, Integer> hmap = new HashMap<String, Integer>();
     	
-    	if(skus == null || skus.length() == 0) {
+    	if(skus == null ) {
     		return -1;
     	}
+    	if(skus.length() == 0) {
+    		return 0;
+    	}
     	
-    	String[] products = skus.split(",");
+    	String[] products = skus.split("");
     	
     	if(products.length == 0) {
     		return -1;
