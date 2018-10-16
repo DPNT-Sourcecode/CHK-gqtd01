@@ -34,10 +34,19 @@ public class CheckoutSolution {
     		
    
     	
-    	for(String key : hmap.keySet()) {
+    	
+    	/*for(String key : hmap.keySet()) {
     		totalPrice+= specialOffer(key, hmap.get(key));
     	}
     	
+    	*/
+    	
+    	ArrayList<String> prioritizedStrings = 	processPrirityOneFirst(hmap.keySet(), skus);
+    	
+    	for(String key : prioritizedStrings) {
+    		totalPrice+= specialOffer(hmap, key, hmap.get(key));
+    	}
+    			
     	return totalPrice;
     	
     }
@@ -94,10 +103,13 @@ public class CheckoutSolution {
     	
     }
     
-    private ArrayList<String> processPrirityOneFirst(Set<String> keySet) {
+    private ArrayList<String> processPrirityOneFirst(Set<String> keySet, String inputString) {
     	
     	ArrayList<String> stringArrays = new ArrayList<String>();
-    	stringArrays.add("E");
+
+    	if(inputString.contains("E")) {
+    		stringArrays.add("E");
+    	}
     	
     	for(String key : keySet) {
     		
