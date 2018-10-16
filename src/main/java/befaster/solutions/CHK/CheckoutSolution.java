@@ -137,7 +137,7 @@ public class CheckoutSolution {
     	
     	for(int i=0; i< proStringLength; i++) {
     		item = proString.charAt(i);
-    		if(item  != 'A' && item  != 'B' && item  != 'C' && item  != 'D') {
+    		if(item  != 'A' && item  != 'B' && item  != 'C' && item  != 'D' && item != 'E') {
         		throw new IncorrectFormatException("Format exception");
         	}
     		if(map.get(item+"") == null) {
@@ -155,7 +155,7 @@ public class CheckoutSolution {
 	public void computeCase1(){
     	
     	CheckoutSolution checkSol = new CheckoutSolution();
-		assertEquals((Integer)115, checkSol.checkout("ABCD"));
+		assertEquals((Integer)165, checkSol.checkout("EEABCD"));
 	}
    
   
