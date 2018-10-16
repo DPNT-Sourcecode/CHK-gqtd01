@@ -217,6 +217,23 @@ public class CheckoutSolution {
     		totalPrice = quantity * 40;
     	}
     	
+    	if(item.equals("V")) {
+    		
+    		
+    		if((quantity / 3) > 0) {
+    			totalPrice+= (quantity / 3) * 130;
+    			
+    		}
+    		
+    		remainings = quantity % 3;
+    		
+    		if((remainings / 2) > 0) {
+    			totalPrice+= (remainings / 2) * 90;
+    		}
+    		
+    		totalPrice+= (remainings % 2) * 50;
+    		
+    	}
     	return totalPrice;
     	
     }
