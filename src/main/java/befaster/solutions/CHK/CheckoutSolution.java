@@ -75,7 +75,7 @@ public class CheckoutSolution {
     		throw new IncorrectFormatException("Format exception");
     	}
     	
-    	if(quantityString.length() == 1) {
+    	if(proString.length() == 1) {
     		quantity = 1;
     	}
     	else {
