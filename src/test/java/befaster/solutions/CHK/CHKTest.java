@@ -32,6 +32,12 @@ public class CHKTest {
 		
 		assertEquals((Integer)15000, checkSol.checkout("1000D"));
 	}
+	
+	@Test
+	public void computeCase4(){
+		
+		assertEquals(new Integer(-1), checkSol.checkout("1000Z"));
+	}
 
 }
 

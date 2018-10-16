@@ -16,7 +16,13 @@ public class CheckoutSolution {
     	
     	for(String product : products) {
     		
-    			processProductString(hmap, product);
+    			try {
+					processProductString(hmap, product);
+				} catch (IncorrectFormatException e) {
+					
+					return -1;
+					
+				}
     		
     	}
     	
