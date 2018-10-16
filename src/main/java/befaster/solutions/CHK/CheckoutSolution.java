@@ -70,10 +70,10 @@ public class CheckoutSolution {
     		remainings = quantity % 5;
     		
     		if((remainings / 3) > 0) {
-    			totalPrice+= (quantity / 3) * 130;
+    			totalPrice+= (remainings / 3) * 130;
     		}
     		
-    		totalPrice+= (quantity % 3) * 50;
+    		totalPrice+= (remainings % 3) * 50;
     		
     	}
     	
