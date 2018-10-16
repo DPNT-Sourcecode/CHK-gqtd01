@@ -2,7 +2,9 @@ package befaster.solutions.CHK;
 
 
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Set;
 
 
 
@@ -77,10 +79,12 @@ public class CheckoutSolution {
     		if((quantity / 2) > 0) {
     			int amount = quantity / 2;
     			
-    			if(map.get("B") >= amount) {
-    				map.put("B",map.get("B") - amount);
-    			} else {
-    				map.put("B",0);
+    			if(map.get("B") != null) {
+					if (map.get("B") >= amount) {
+						map.put("B", map.get("B") - amount);
+					} else {
+						map.put("B", 0);
+					}
     			}
     		}
     		totalPrice = quantity * 40;
@@ -90,6 +94,22 @@ public class CheckoutSolution {
     	
     }
     
+    private void processPrirityOneFirst(Set<String> keySet) {
+    	
+    	ArrayList<String> stringArrays = new ArrayList<String>();
+    	stringArrays.add("E");
+    	int i = 1;
+    	for(String key : keySet) {
+    		
+    		if(!key.equals("E")) {
+    			stringArrays.add(key);
+    		}
+    		
+    		//totalPrice+= specialOffer(key, hmap.get(key));
+    		
+    	}
+    	
+    }
     
   
     private void processProductString(HashMap<String, Integer> map, String proString) throws IncorrectFormatException {
