@@ -64,7 +64,7 @@ public class CheckoutSolution {
     	int quantity;
     	String quantityString = proString.substring(0, proString.length() - 1);
     	char item = proString.charAt(proString.length() - 1);
-    	if(item  != 'A' || item  != 'B' || item  != 'C' || item  != 'D') {
+    	if(item  != 'A' && item  != 'B' && item  != 'C' && item  != 'D') {
     		throw new IncorrectFormatException("Format exception");
     	}
     	try {
@@ -81,8 +81,8 @@ public class CheckoutSolution {
     public void testCheckout() {
     	
     	CheckoutSolution chSol = new CheckoutSolution();
-    	assertEquals((Integer)660, chSol.checkout("6A,10B,5C,5D"));
-    	//assertEquals(new Integer(-1), chSol.checkout("1000Z"));
+    	//assertEquals((Integer)660, chSol.checkout("6A,10B,5C,5D"));
+    	assertEquals(new Integer(-1), chSol.checkout("1000Z"));
     	
     }
     
