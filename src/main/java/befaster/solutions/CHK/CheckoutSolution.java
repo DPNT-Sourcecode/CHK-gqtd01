@@ -279,6 +279,13 @@ public class CheckoutSolution {
     }
     
   
+    private int processGroupOffer(HashMap<String, Integer> map, ArrayList<String> groups, int groupSize) {
+    	
+    	
+    	
+    	return 0;
+    }
+    
     private void processProductString(HashMap<String, Integer> map, String proString) throws IncorrectFormatException {
     	
     	int proStringLength = proString.length();
