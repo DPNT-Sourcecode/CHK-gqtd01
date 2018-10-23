@@ -304,17 +304,24 @@ public class CheckoutSolution {
     			
     			quantity = map.get(groups.get(index));
     			
-    			if(quantity >= leftItems) {
-    				map.put(groups.get(index), leftItems);
-    				leftItems = 0;
+    			if(leftItems > 0) {
+  				
+    				if(quantity >= leftItems) {
+    					map.put(groups.get(index), leftItems);
+    					leftItems = 0;
+    				}
+    				else {
+    					leftItems = leftItems - quantity;
+    				}
     			}
     			else {
-    				leftItems = leftItems - quantity;
+    				
+    				map.put(groups.get(index), 0);
     			}
     		}
     	}
     	
-    	return 0;
+    	return totalCost;
     }
     
     private void processProductString(HashMap<String, Integer> map, String proString) throws IncorrectFormatException {
