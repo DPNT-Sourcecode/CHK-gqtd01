@@ -282,10 +282,13 @@ public class CheckoutSolution {
     private int processGroupOffer(HashMap<String, Integer> map, ArrayList<String> groups, int groupSize) {
     	
     	int totalItems = 0;
+    	int totalCost = 0;
     	
     	for(int index =0; index < groups.size(); index++) {
     		totalItems += map.get(groups.get(index));
     	}
+    	
+    	totalCost = ( totalItems / groupSize ) * 45;
     	
     	return 0;
     }
