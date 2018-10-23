@@ -17,9 +17,26 @@ public class CHKTest {
 	
 	@Test
 	public void computeCase1(){
-		
-		assertEquals((Integer)115, checkSol.checkout("ABCD"));
+    	
+    	CheckoutSolution checkSol = new CheckoutSolution();
+		assertEquals((Integer)(220 + 90 + 17), checkSol.checkout("AAAAAFFFXXSSSZT"));
 	}
+	
+	@Test
+	public void computeCase2(){
+    	
+    	CheckoutSolution checkSol = new CheckoutSolution();
+		assertEquals((Integer)(220 + 90 ), checkSol.checkout("AAAAAFFFXXSSZT"));
+	}
+	
+	
+	@Test
+	public void computeCase3(){
+    	
+    	CheckoutSolution checkSol = new CheckoutSolution();
+		assertEquals((Integer)(220 + 90 + 17), checkSol.checkout("AAAAAFFFSSSZTXX"));
+	}
+	
 	
 	/*@Test
 	public void computeCase2(){
