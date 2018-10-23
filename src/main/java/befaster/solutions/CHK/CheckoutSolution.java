@@ -283,12 +283,17 @@ public class CheckoutSolution {
     	
     	int totalItems = 0;
     	int totalCost = 0;
+    	int leftItems = 0;
     	
     	for(int index =0; index < groups.size(); index++) {
     		totalItems += map.get(groups.get(index));
     	}
     	
     	totalCost = ( totalItems / groupSize ) * 45;
+    	
+    	leftItems = totalItems % groupSize;
+    	
+    	
     	
     	return 0;
     }
