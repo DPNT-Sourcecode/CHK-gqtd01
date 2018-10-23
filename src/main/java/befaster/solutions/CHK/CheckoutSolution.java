@@ -137,7 +137,7 @@ public class CheckoutSolution {
     	}
     	
     	else if(item.equals("K")) {
-    		totalPrice = (quantity / 2) * 150 + (quantity % 2) * 80;
+    		totalPrice = (quantity / 2) * 120 + (quantity % 2) * 70;
     	}
     	else if(item.equals("L")) {
     		
@@ -195,7 +195,7 @@ public class CheckoutSolution {
     	
     	else if(item.equals("S")) {
     		
-    		totalPrice = quantity * 30;
+    		totalPrice = quantity * 20;
     	}
     	
     	else if(item.equals("T")) {
