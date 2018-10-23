@@ -18,6 +18,7 @@ public class CheckoutSolution {
         
     	int totalPrice = 0;
     	HashMap<String, Integer> hmap = new HashMap<String, Integer>();
+    	ArrayList<String> groupItems = new ArrayList<String>();
     	
     	if(skus == null ) {
     		return -1;
@@ -37,7 +38,17 @@ public class CheckoutSolution {
 				}
     		
    
-    	
+    			/**
+    			 * group of items
+    			 */
+    			groupItems.add("X");
+    			groupItems.add("S");
+    			groupItems.add("T");
+    			groupItems.add("Y");
+    			groupItems.add("Z");
+    			
+    	// process group of items first		
+    	totalPrice+= processGroupOffer(hmap, groupItems, 3, 45);
    
     	
     	ArrayList<String> prioritizedStrings = 	processPrirityOneFirst(hmap.keySet(), skus);
