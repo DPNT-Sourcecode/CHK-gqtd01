@@ -279,7 +279,7 @@ public class CheckoutSolution {
     }
     
   
-    private int processGroupOffer(HashMap<String, Integer> map, ArrayList<String> groups, int groupSize) {
+    private int processGroupOffer(HashMap<String, Integer> map, ArrayList<String> groups, int groupSize, int spPrice) {
     	
     	int totalItems = 0;
     	int totalCost = 0;
@@ -294,7 +294,7 @@ public class CheckoutSolution {
     		}
     	}
     	
-    	totalCost = ( totalItems / groupSize ) * 45;
+    	totalCost = ( totalItems / groupSize ) * spPrice;
     	
     	leftItems = totalItems % groupSize;
     	
