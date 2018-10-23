@@ -284,6 +284,7 @@ public class CheckoutSolution {
     	int totalItems = 0;
     	int totalCost = 0;
     	int leftItems = 0;
+    	int quantity = 0;
     	
     	for(int index =0; index < groups.size(); index++) {
 
@@ -299,7 +300,15 @@ public class CheckoutSolution {
     	
     	for(int index =0; index < groups.size(); index++) {
     		
-    		if()
+    		if(map.get(groups.get(index)) != null) {
+    			
+    			quantity = map.get(groups.get(index));
+    			
+    			if(quantity >= leftItems) {
+    				map.put(groups.get(index), leftItems);
+    				leftItems = 0;
+    			}
+    		}
     	}
     	
     	return 0;
