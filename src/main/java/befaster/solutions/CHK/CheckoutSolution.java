@@ -360,7 +360,7 @@ public class CheckoutSolution {
 	public void computeCase1(){
     	
     	CheckoutSolution checkSol = new CheckoutSolution();
-		assertEquals((Integer)220, checkSol.checkout("AAAAAFFF"));
+		assertEquals((Integer)(220 + 90 + 17), checkSol.checkout("AAAAAFFFXXSSSZT"));
 	}
    
   
