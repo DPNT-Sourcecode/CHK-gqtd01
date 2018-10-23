@@ -308,6 +308,9 @@ public class CheckoutSolution {
     				map.put(groups.get(index), leftItems);
     				leftItems = 0;
     			}
+    			else {
+    				leftItems = leftItems - quantity;
+    			}
     		}
     	}
     	
