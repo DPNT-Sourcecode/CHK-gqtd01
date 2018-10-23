@@ -235,15 +235,15 @@ public class CheckoutSolution {
     	}
     	else if(item.equals("X")) {
     		
-    		totalPrice = quantity * 90;
+    		totalPrice = quantity * 17;
     	}
     	else if(item.equals("Y")) {
     		
-    		totalPrice = quantity * 10;
+    		totalPrice = quantity * 20;
     	}
     	else if(item.equals("Z")) {
 	
-    		totalPrice = quantity * 50;
+    		totalPrice = quantity * 21;
     	}
     	
     	return totalPrice;
